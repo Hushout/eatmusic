@@ -1,0 +1,17 @@
+$backGroundColor: #000000;
+$primaryColor: #A029FF;
+$secondaryColor: #B451FC;
+$altColor: #FFA7FF;
+$contrast: #5000FF;
+$color: white;
+$fontFamily: 'obviously-narrow','Helvetica',sans-serif;
+
+:export {
+    background: $backGroundColor;
+    primary: $primaryColor;
+    secondary: $secondaryColor;
+    altColor: $altColor;
+    contrast: $contrast;
+    color: $color;
+    fontFamily: $fontFamily;
+}

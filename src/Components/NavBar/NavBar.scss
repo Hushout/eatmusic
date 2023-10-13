@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+.NavBar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    a {
+        font-family: $fontFamily;
+        font-weight: 600;
+        font-size: large;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        color: white;
+    }
+}
