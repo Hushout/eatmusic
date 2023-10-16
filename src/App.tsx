@@ -1,47 +1,56 @@
-import React from 'react';
+import React, { lazy, Suspense, FC } from 'react';
 import './App.scss';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 import NavBar from './Components/NavBar/NavBar';
-import Home from './Pages/Home/Home';
-import Project from './Pages/Project/Project';
-import Contact from './Pages/Contact/Contact';
+import { Loading } from './Components/Loading/Loading';
+
+//Static pages
+const HomePage = lazy(() => import('./Pages/Home/Home'));
+const ProjectPage = lazy(() => import('./Pages/Project/Project'));
+const ContactPage = lazy(() => import('./Pages/Contact/Contact'));
+
+//error pages
+const NotFoundPage = lazy(() => import('./Pages/NotFound/NotFound'))
 
 function App() {
-  const sectionArray: { id: number; path: string; name: string; element: JSX.Element }[] = [
+  const sectionArray: { id: number; path: string; name: string; component: FC }[] = [
     {
       id: 0,
       path: "/",
       name: "home",
-      element: <Home />
+      component: HomePage
     },
     {
       id: 1,
       path: "/project",
       name: "project",
-      element: <Project />
+      component: ProjectPage
     },
     {
       id: 2,
       path: "/contact",
       name: "contact",
-      element: <Contact />
+      component: ContactPage
     }
   ]
 
   const routeComponents = sectionArray.map(section => {
     return (
-      <Route key={section.id} path={section.path} element={section.element} />
+      <Route key={section.id} path={section.path} element={<section.component />} />
     )
   })
   return (
     <div className="App">
       <BrowserRouter>
-        <NavBar links={sectionArray} />
-        <main>
-          <Routes>
-            {routeComponents}
-          </Routes>
-        </main>
+        <Suspense fallback={<Loading />}>
+          <NavBar links={sectionArray} />
+          <main>
+            <Routes>
+              {routeComponents}
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </main>
+        </Suspense>
       </BrowserRouter>
     </div>
   );
