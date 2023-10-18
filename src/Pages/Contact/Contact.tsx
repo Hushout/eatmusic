@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import './Contact.scss';
 
-const Contact = () => {
-  return <div>Contact</div>;
+const Contact: FC = () => {
+    return <div>Contact</div>;
 };
 
 export default Contact;

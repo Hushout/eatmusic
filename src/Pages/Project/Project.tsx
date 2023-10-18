@@ -1,6 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import "./Project.scss";
 
-export default function Project() {
-  return <div>Project</div>;
+const Project: FC = () => {
+  return <div>
+  </div>;
 }
+
+export default Project;

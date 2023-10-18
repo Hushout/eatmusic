@@ -2,15 +2,15 @@ import React, { FC } from "react";
 import './NavBar.scss';
 import { Link } from "react-router-dom";
 
-type navBarProps = {
-    links: { path: string; name: string; }[]
+interface navBarProps {
+    paths: { path: string; name: string; icon?: FC }[]
 }
 
-const NavBar: FC<navBarProps> = ({ links }: navBarProps) => {
-    
+const NavBar: FC<navBarProps> = ({ paths }: navBarProps) => {
+
     return <div className="NavBar">
-        {links.map(link => {
-            return <Link key={link.name} to={link.path}>{link.name}</Link>
+        {paths.map(path => {
+            return <Link key={path.name} to={path.path}>{path.icon ? <path.icon /> : path.name}</Link>
         })}
     </div>;
 }
