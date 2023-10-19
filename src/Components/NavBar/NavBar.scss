@@ -1,12 +1,16 @@
-@import '../../variables.scss';
+@import '../../Constants/variables.scss';
 
 .NavBar{
     position: fixed;
+    top: 0;
     width: 100%;
+    height: $navBarHeight;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
+    align-items: center;
+    flex-wrap: nowrap;
+    transition: top .3s cubic-bezier(.57,.21,.69,1.25);
     a {
         font-family: $fontFamily;
         font-weight: 600;
@@ -16,4 +20,18 @@
         display: block;
         color: white;
     }
+}
+
+.NavBar.hide{
+    top:calc(-1 * #{$navBarHeight});
+    transition: top .3s cubic-bezier(.57,.21,.69,1.25);
+}
+
+.homeLink{
+    display:block;
+    top: 0;
+    left: 0;
+    width: 186px;
+    margin-top: 16px;
+    flex-shrink: 0;
 }

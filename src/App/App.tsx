@@ -3,6 +3,10 @@ import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 import { Loading } from '../Components/Loading/Loading';
 import Layout from '../Pages/Layout/Layout';
 
+//Svg icons
+import { HomeLogo } from '../Svg/HomeLogo/HomeLogo';
+import ContactButton from '../Components/ContactButton/ContactButton';
+
 //Static pages
 const HomePage = lazy(() => import('../Pages/Home/Home'));
 const ProjectPage = lazy(() => import('../Pages/Project/Project'));
@@ -28,6 +32,7 @@ function App() {
     {
       path: "/",
       name: "home",
+      icon: HomeLogo,
       component: HomePage
     },
     {
@@ -38,6 +43,7 @@ function App() {
     {
       path: "/contact",
       name: "contact",
+      icon: ContactButton,
       component: ContactPage
     }
   ]

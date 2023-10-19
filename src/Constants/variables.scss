@@ -5,6 +5,7 @@ $altColor: #FFA7FF;
 $contrast: #5000FF;
 $color: white;
 $fontFamily: 'obviously-narrow','Helvetica',sans-serif;
+$navBarHeight: 120px;
 
 :export {
     background: $backGroundColor;
@@ -14,4 +15,5 @@ $fontFamily: 'obviously-narrow','Helvetica',sans-serif;
     contrast: $contrast;
     color: $color;
     fontFamily: $fontFamily;
+    navBarHeight: $navBarHeight;
 }

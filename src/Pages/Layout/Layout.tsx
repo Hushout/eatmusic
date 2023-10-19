@@ -1,13 +1,12 @@
 import React, { FC, ReactNode } from "react";
 import NavBar from "../../Components/NavBar/NavBar";
 
-interface Props {
+interface LayoutProps {
     children: ReactNode,
     paths: { path: string; name: string; icon?: FC }[]
 }
 
-const Layout: FC<Props> = (props: Props) => {
-    const { children, paths } = props;
+const Layout: FC<LayoutProps> = ({ children, paths }: LayoutProps) => {
     return <div>
         <header>
             <NavBar paths={paths} />
