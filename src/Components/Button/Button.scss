@@ -1,18 +1,66 @@
 @import '../../Constants/variables.scss';
 
-.Button {
-  button {
-    font-family: 'impact';
-    font-weight: 800;
-    font-size: 24px;
-    color: $color;
-    padding: 0;
-    text-shadow: none;
-    text-transform: uppercase;
+.Button,
+.Button span {
+  font-family: 'impact';
+  font-weight: 800;
+  font-size: 24px;
+  padding: 0;
+  text-shadow: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.Button{
+    position: relative;
     background-color: $primaryColor;
-    border: none;
-    border-radius: 3px;
-    padding: 0.7em;
-    cursor: pointer;
-  }
+    color: $color;
+    border: 0;
+    border-radius: 5px;
+    padding: 16px 32px;
+    margin: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 $primaryColor;
+}
+
+.Button > span span{
+    position: absolute;
+    left: 0;
+    color: transparent;
+    pointer-events: none;
+    padding:0 0.7em;
+}
+
+.Button:hover{
+    color: transparent;
+}
+
+.Button:hover > span span{
+    color: $color;
+}
+
+.Button span:nth-child(1){
+    animation: move1 1s linear infinite;
+}
+
+.Button span:nth-child(2){
+    animation: move2 1s linear infinite;
+}
+
+@keyframes move1{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes move2 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
