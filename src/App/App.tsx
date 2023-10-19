@@ -5,6 +5,7 @@ import Layout from '../Pages/Layout/Layout';
 
 //Svg icons
 import { HomeLogo } from '../Svg/HomeLogo/HomeLogo';
+import ContactButton from '../Components/ContactButton/ContactButton';
 
 //Static pages
 const HomePage = lazy(() => import('../Pages/Home/Home'));
@@ -42,6 +43,7 @@ function App() {
     {
       path: "/contact",
       name: "contact",
+      icon: ContactButton,
       component: ContactPage
     }
   ]
