@@ -10,7 +10,7 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
-    
+    transition: top .3s cubic-bezier(.57,.21,.69,1.25);
     a {
         font-family: $fontFamily;
         font-weight: 600;
@@ -24,6 +24,7 @@
 
 .NavBar.hide{
     top:calc(-1 * #{$navBarHeight});
+    transition: top .3s cubic-bezier(.57,.21,.69,1.25);
 }
 
 .homeLink{
