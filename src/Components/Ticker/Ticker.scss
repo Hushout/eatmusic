@@ -27,14 +27,13 @@
     }
 
     span::after{
-        content: ' ⭐ ';
+        content: '⭐';
         margin-left: 20px;
     }
 
     .tickerTape{
         position: absolute;
         left: 0;
-        padding:0 0.7em;
     }
 
     .tickerTape:nth-child(1){
