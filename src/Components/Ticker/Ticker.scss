@@ -1,0 +1,46 @@
+@import '../../Constants/variables.scss';
+
+.Ticker{
+    position: fixed;
+    bottom: 0;
+    z-index: 91;
+    color: $color;
+    background-color: $secondaryColor;
+    font-family: 'impact';
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    overflow: hidden;
+    width: 100vw;
+    white-space: nowrap;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 32px;
+
+    span{
+        color: $colorComplementary;
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    span::after{
+        content: ' ⭐ ';
+        margin-left: 20px;
+    }
+
+    .tickerTape{
+        position: absolute;
+        left: 0;
+        padding:0 0.7em;
+    }
+
+    .tickerTape:nth-child(1){
+        animation: move1 15s linear infinite;
+    }
+    .tickerTape:nth-child(2){
+        animation: move2 15s linear infinite;
+    }
+}

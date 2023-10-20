@@ -7,7 +7,7 @@ const WheelScroll: FC = () => {
 
     const handleWheel = (event: WheelEvent) => {
       const delta = event.deltaY;
-      const sensitivity:number = 1;
+      const sensitivity:number = 0.5;
       setRotationAngle(rotationAngle + delta * sensitivity);
     };
   
