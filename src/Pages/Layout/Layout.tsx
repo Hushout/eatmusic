@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from "react";
 import NavBar from "../../Components/NavBar/NavBar";
+import WheelScroll from "../../Components/WheelScroll/WheelScroll";
 
 interface LayoutProps {
     children: ReactNode,
@@ -11,6 +12,7 @@ const Layout: FC<LayoutProps> = ({ children, paths }: LayoutProps) => {
         <header>
             <NavBar paths={paths} />
         </header>
+        <WheelScroll />
         <div className="contentLayout">
             {children}
         </div>
