@@ -2,6 +2,7 @@ import React, { FC, ReactNode } from "react";
 import NavBar from "../../Components/NavBar/NavBar";
 import WheelScroll from "../../Components/WheelScroll/WheelScroll";
 import Ticker from "../../Components/Ticker/Ticker";
+import Background from "../../Components/Background/Background";
 
 interface LayoutProps {
     children: ReactNode,
@@ -10,6 +11,7 @@ interface LayoutProps {
 
 const Layout: FC<LayoutProps> = ({ children, paths }: LayoutProps) => {
     return <div>
+        <Background />
         <header>
             <NavBar paths={paths} />
         </header>
