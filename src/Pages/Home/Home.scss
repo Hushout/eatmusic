@@ -1,3 +1,24 @@
 .Home{
-    height: 3600px;
+    .Profile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .ProfileImage{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .ProfileName{
+            font-size: 30px;
+            margin-top: 20px;
+        }
+        .ProfileBio{
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
 }
+
