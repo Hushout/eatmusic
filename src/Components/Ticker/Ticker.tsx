@@ -17,6 +17,8 @@ const Ticker: FC = () => {
                 <span>GraphQL</span>
                 <span>Typescript</span>
                 <span>By CAO ANH</span>
+                <span>inspirated by eat-curious.com</span>
+                <span>have Fun !</span>
             </div>
             <div className="tickerTape">
                 <span>ReactJs</span>
@@ -31,6 +33,8 @@ const Ticker: FC = () => {
                 <span>GraphQL</span>
                 <span>Typescript</span>
                 <span>By CAO ANH</span>
+                <span>inspirated by eat-curious.com</span>
+                <span>have Fun !</span>
             </div>
         </div>
     );
