@@ -1,5 +1,16 @@
 @import '/src/Constants/variables.scss';
 
+@font-face {
+  font-family: 'rollbox';
+  src: url('../public/font/rollbox-font/RollboxRegular-jE2lv.ttf') format('truetype'),
+    url('../public/font/rollbox-font/RollboxExtraBold-3zV4X.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'methanerse';
+  src: url('../public/font/methanerse-font/MethanerseFreeTrial-eZX7x.ttf') format('truetype');
+}
+
 body {
   background-color: $backGroundColor;
   margin: 0;
@@ -16,15 +27,13 @@ code {
     monospace;
 }
 
-::-webkit-scrollbar
-{
-	width: 7px;
-	background-color: transparent;
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: transparent;
 }
 
-::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: $color;
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: $color;
 }
