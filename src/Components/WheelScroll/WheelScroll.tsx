@@ -1,15 +1,15 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useCallback, useEffect, useState } from "react";
 import './WheelScroll.scss'
 
 const WheelScroll: FC = () => {
 
     const [rotationAngle, setRotationAngle] = useState(0);
 
-    const handleWheel = (event: WheelEvent) => {
+    const handleWheel = useCallback((event: WheelEvent) => {
       const delta = event.deltaY;
       const sensitivity:number = 0.5;
-      setRotationAngle(rotationAngle + delta * sensitivity);
-    };
+      setRotationAngle(prevRotationAngle => prevRotationAngle + delta * sensitivity);
+    }, []);
 
     useEffect(() => {
       window.addEventListener("wheel", handleWheel);
