@@ -1,10 +1,8 @@
 import React, { FC } from "react";
-import { useNavigate } from 'react-router-dom';
 import "./Home.scss";
 import Linka from "../../Components/Linka/Linka";
 
 const Home: FC = () => {
-  const navigate = useNavigate();
   return <div className="Home">
     <div className="section">
       <div className="Profile">
@@ -18,12 +16,8 @@ const Home: FC = () => {
         <br />
         If you want to know more about me, you can check my projects or contact me 😊.
         <div className="Linkas">
-          <Linka onClick={() => {
-            navigate('/project');
-          }}>→ Check my projects</Linka>
-          <Linka onClick={() => {
-            navigate('/contact');
-          }}>→ Contact me</Linka>
+          <Linka href="/project">→ Check my projects</Linka>
+          <Linka href="/contact">→ Contact me</Linka>
         </div>
       </div>
       <div className="pictureProfile">
