@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import "./Skill.scss";
 import Card from "../../Components/Card/Card";
-import { title } from "process";
 
 const Skill: FC = () => {
     const skills: { title: string, content: string, img: string }[] = [
