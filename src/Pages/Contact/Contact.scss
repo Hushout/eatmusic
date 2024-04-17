@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 50vw;
     flex-direction: column;
     .title{
         font-size: 5em;
@@ -15,11 +16,11 @@
     }
     .contentContact{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         flex-direction: row;
-        width: fit-content;
         font-size: 1em;
+        width: 100%;
         .subTitle{
             font-family: 'rollbox' , sans-serif;
             font-weight: 600;
@@ -33,6 +34,7 @@
         .rightBox{
             display: flex;
             flex-direction: row;
+            justify-content: flex-end;
             align-items: center;
             width: 50%;
         }
