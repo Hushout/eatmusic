@@ -4,7 +4,7 @@ import './Card.scss';
 interface CardProps {
     content: {
         title: string;
-        content: string;
+        content: ReactNode;
         img: string;
     }
 }
