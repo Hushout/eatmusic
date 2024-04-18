@@ -12,6 +12,15 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
     transition: all 0.3s ease;
+    ul>li{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 1em;
+        p{
+            margin-left: 1em;
+        }
+    }
     &:hover{
         transform: scale(1.05);
         .titleCard{
