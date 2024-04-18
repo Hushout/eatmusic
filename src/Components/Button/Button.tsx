@@ -2,7 +2,7 @@ import React, { FC, useState } from "react";
 import "./Button.scss";
 
 interface ButtonProps {
-    children: string;
+    children?: string;
     onClick?: () => void;
     boxStyle?: {};
     fontStyle?: string;
