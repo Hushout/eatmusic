@@ -52,7 +52,7 @@ const Skill: FC = () => {
 
     return <div className="SkillPage">
         <div className="title">Skill</div>
-        <div className="skillCard">
+        <div className="skillCards">
             {skillCards}
         </div>
     </div>;
