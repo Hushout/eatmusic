@@ -1,0 +1,30 @@
+.ProjectPage {
+    display: flex;
+    align-items: flex-start;
+    height: 80vh;
+    width: 90vw;
+    flex-direction: column;
+    
+
+    .title {
+        font-size: 5em;
+        margin-bottom: 1rem;
+        font-family: 'methanerse', sans-serif;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        border-bottom: 3px solid white;
+    }
+    .projectCards {
+        width: 90vw;
+        overflow-x: scroll;
+    }
+    .projectWrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 2rem;
+        flex-direction: row;
+        
+    }
+}
