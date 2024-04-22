@@ -46,7 +46,7 @@ const Skill: FC = () => {
 
     const skillCards = skills.map(skill => {
         return (
-            <Card content={skill} />
+            <Card content={skill} key={skill.title}/>
         )
     });
 
