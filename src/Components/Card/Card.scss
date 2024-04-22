@@ -1,6 +1,6 @@
 @import '../../Constants/variables.scss';
 
-.Card{
+.Card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,42 +12,51 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
     transition: all 0.3s ease;
-    ul>li{
+
+    ul>li {
         list-style: none;
         display: flex;
         align-items: center;
         margin: 1em;
-        p{
+
+        p {
             margin-left: 1em;
         }
     }
-    &:hover{
+
+    &:hover {
         transform: scale(1.05);
-        .titleCard{
+
+        .titleCard {
             display: none;
         }
-        .contentCard{
+
+        .contentCard {
             display: block;
         }
-        img{
+
+        img {
             filter: blur(5px) brightness(0.5);
         }
     }
-    img{
+
+    img {
         width: 100%;
         height: 100%;
         border-radius: 10px;
         object-fit: cover;
     }
-    .titleCard{
-        position: absolute;
+
+    .titleCard {
+        position: relative;
+        top: -50%;
         font-size: 1.5rem;
         font-weight: 700;
-        margin: 10px 0;
-        max-width: 90%;
+        margin: -20px 0;
         font-family: 'methanerse', 'Helvetica', sans-serif;
     }
-    .contentCard{
+
+    .contentCard {
         display: none;
         position: absolute;
         font-size: 1rem;
